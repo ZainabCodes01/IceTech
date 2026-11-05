@@ -1,0 +1,6 @@
+{
+  "name": "ICE TECH - Signature Melting Ice Cream",
+  "description": "Experience ICE TECH: Premium artisanal ice cream crafted with signature creamy melting textures, bold refreshing flavours, and cold-crafted delight.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

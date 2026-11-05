@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes slowFloatReverse {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes creamyDripStretch {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.04);
+  }
+}
+
+@keyframes creamyGleam {
+  0% {
+    opacity: 0.35;
+    transform: translateX(-100%);
+  }
+  50%, 100% {
+    opacity: 0.7;
+    transform: translateX(100%);
+  }
+}
+
+.animate-slow-float {
+  animation: slowFloat 6s ease-in-out infinite;
+}
+
+.animate-slow-float-delayed {
+  animation: slowFloatReverse 7s ease-in-out 1.5s infinite;
+}
+
+.animate-creamy-drip {
+  animation: creamyDripStretch 4.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Creamy 3D Shadows & Highlights */
+.cream-drip-shadow-blue {
+  filter: drop-shadow(0 8px 14px rgba(11, 95, 150, 0.22));
+}
+
+.cream-drip-shadow-white {
+  filter: drop-shadow(0 10px 18px rgba(16, 116, 178, 0.16));
+}
+
+.cream-card-shadow {
+  box-shadow: 0 12px 30px -8px rgba(16, 116, 178, 0.1), 0 4px 10px -3px rgba(0, 0, 0, 0.03);
+}
+
+.cream-card-shadow-hover {
+  box-shadow: 0 20px 40px -10px rgba(16, 116, 178, 0.18), 0 6px 14px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar for ice cream feel */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EAF7FD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #33A5D9;
+  border-radius: 9999px;
+  border: 2px solid #EAF7FD;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1074B2;
+}
